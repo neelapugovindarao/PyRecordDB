@@ -30,3 +30,25 @@ def Add(name , age , branch , marks):
     
     conn.commit()
     conn.close()
+
+
+def View_one(id=None, name=None):
+    conn = con()
+    cur = conn.cursor()
+
+    if id:
+        cur.execute("SELECT * FROM july WHERE id = ?", (id,))
+        row = cur.fetchone()
+        print(row)
+
+    elif name:
+        cur.execute("SELECT * FROM july WHERE name = ?", (name,))
+        row = cur.fetchone()
+        print(row)
+
+    else:
+        print("Enter either id or name.")
+
+    conn.close()
+
+
