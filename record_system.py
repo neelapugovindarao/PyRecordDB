@@ -52,3 +52,19 @@ def View_one(id=None, name=None):
     conn.close()
 
 
+    
+def View_all():
+    conn = con()
+    cur = conn.cursor()
+
+    cur.execute("SELECT * FROM july")
+    rows = cur.fetchall()
+
+    for row in rows:
+        print(row)
+
+    conn.close()
+    
+
+
+
