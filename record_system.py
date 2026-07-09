@@ -67,4 +67,29 @@ def View_all():
     
 
 
+   
+def Delete(id=None, name=None):
+    conn = con()
+    cur = conn.cursor()
+
+    if id:
+        cur.execute("DELETE FROM july WHERE id = ?", (id,))
+    elif name:
+        cur.execute("DELETE FROM july WHERE name = ?", (name,))
+    else:
+        print("Enter either id or name.")
+        conn.close()
+        return
+
+    conn.commit()
+
+    if cur.rowcount > 0:
+        print(f"{cur.rowcount} record(s) deleted successfully.")
+    else:
+        print("No matching record found.")
+
+    conn.close()
+  
+
+ 
 
