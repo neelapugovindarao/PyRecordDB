@@ -111,6 +111,22 @@ def update(id, name=None, age=None, branch=None, marks=None):
     new_branch = branch if branch is not None else row[3]
     new_marks = marks if marks is not None else row[4]
 
+    
+    cur.execute("""
+        UPDATE july
+        SET
+            name = ?,
+            age = ?,
+            branch = ?,
+            marks = ?
+        WHERE id = ?
+    """, (new_name, new_age, new_branch, new_marks, id))
+
+    conn.commit()
+    print("Updated successfully.")
+    conn.close()
+
+
   
 
  
