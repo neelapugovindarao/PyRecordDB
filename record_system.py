@@ -89,6 +89,28 @@ def Delete(id=None, name=None):
         print("No matching record found.")
 
     conn.close()
+
+
+
+ 
+def update(id, name=None, age=None, branch=None, marks=None):
+    conn = con()
+    cur = conn.cursor()
+
+    cur.execute("SELECT * FROM july WHERE id = ?", (id,))
+    row = cur.fetchone()
+
+    if not row:
+        print("Person not found.")
+        conn.close()
+        return
+
+    #keep the old value is new vaues are not given
+    new_name = name if name is not None else row[1]
+    new_age = age if age is not None else row[2]
+    new_branch = branch if branch is not None else row[3]
+    new_marks = marks if marks is not None else row[4]
+
   
 
  
