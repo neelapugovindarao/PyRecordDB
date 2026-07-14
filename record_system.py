@@ -127,6 +127,21 @@ def update(id, name=None, age=None, branch=None, marks=None):
     conn.close()
 
 
+
+while True:
+
+    print("\n===== DATABASE =====")
+    print("1. Add Method")
+    print("2. View Method")
+    print("3. Update Method")
+    print("4. Delete Method")
+    print("5. Exit")
+
+    ch = input("Enter your choice: ")
+
+    
+
+
   
 
  
