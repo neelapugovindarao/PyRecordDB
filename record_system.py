@@ -139,6 +139,17 @@ while True:
 
     ch = input("Enter your choice: ")
 
+    if ch == "1":
+
+        try:
+            name = input("Enter Name: ").strip()
+
+            if name == "":
+                print("Name cannot be empty.")
+                continue
+
+
+
     
 
 
