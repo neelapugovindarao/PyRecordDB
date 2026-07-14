@@ -153,6 +153,14 @@ while True:
             branch= input("Enter branch: ").strip()
             marks = int(input("Enter Marks: "))
 
+                    Add(name, age, department, marks)
+
+                    print("Added successfully!")
+
+        except ValueError:
+            print("Age and Marks must be numbers.")
+
+
 
 
     
