@@ -148,6 +148,11 @@ while True:
                 print("Name cannot be empty.")
                 continue
 
+            
+            age = int(input("Enter Age: "))
+            branch= input("Enter branch: ").strip()
+            marks = int(input("Enter Marks: "))
+
 
 
     
