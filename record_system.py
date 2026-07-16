@@ -171,6 +171,15 @@ while True:
             name = input("Enter Name: ")
             View_one(name=name)
 
+        else:
+            print("Invalid choice.")
+    
+    elif choice == "5":
+
+        print("Thank you!")
+        break
+
+
 
 
 
