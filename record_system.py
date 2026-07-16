@@ -163,21 +163,25 @@ while True:
     elif choice == "2":
         search = input("Search by (1) ID or (2) Name: ")
 
-        if search == "1":
+            if search == "1":
             id = int(input("Enter ID: "))
             View_one(id=id)
 
-        elif search == "2":
+            elif search == "2":
             name = input("Enter Name: ")
             View_one(name=name)
 
-        else:
+            else:
             print("Invalid choice.")
     
-    elif choice == "5":
+        elif choice == "5":
 
-        print("Thank you!")
+            print("Thank you!")
         break
+    else:
+        print("Invalid choice. Please select between 1 and 6.")      
+        
+    
 
 
 
